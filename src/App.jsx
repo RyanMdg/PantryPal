@@ -1,10 +1,10 @@
 import "./App.css";
-import EntryPoint from "./pages/EntryPoint/CheckNewVisitor";
-
+import CheckNewVisitor from "./pages/EntryPoint/CheckNewVisitor";
+import AppRoutes from "./routes/AppRoutes.jsx";
 function App() {
   return (
     <>
-      <EntryPoint />
+      <AppRoutes />
     </>
   );
 }

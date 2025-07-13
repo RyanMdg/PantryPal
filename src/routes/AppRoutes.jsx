@@ -14,7 +14,7 @@ const AppRoutes = () => {
         <Route path="/" element={<CheckNewVisitor />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/Login" element={<Login />} />
-        <Route path="/Stocks" element={<Stocks />} />
+        <Route path="/Inventory" element={<Stocks />} />
         <Route path="/CookWithMe" element={<Cookwithme />} />
         <Route path="/Account" element={<Account />} />
         <Route path="/BudgetTracking" element={<BudgetTracking />} />

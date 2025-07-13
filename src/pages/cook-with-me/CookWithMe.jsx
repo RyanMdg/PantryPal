@@ -1,7 +1,14 @@
+import Nav from "../../Components/Navigation/NavBar";
+
 const cookwithme = () => {
   return (
     <>
-      <h1>this is cook with me page</h1>
+      <header>
+        <Nav />
+      </header>
+      <main>
+        <h1>this is cook with me page</h1>
+      </main>
     </>
   );
 };

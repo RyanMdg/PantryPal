@@ -1,4 +1,5 @@
 import Nav from "../../Components/Navigation/NavBar";
+import StatCard from "../../Components/dashboard/StatCard";
 
 const dashboard = () => {
   return (

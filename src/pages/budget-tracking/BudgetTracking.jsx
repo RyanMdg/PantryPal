@@ -1,7 +1,14 @@
+import Nav from "../../Components/Navigation/NavBar";
+
 const BudgetTracking = () => {
   return (
     <>
-      <h1>this is BudgetTracking page</h1>
+      <header>
+        <Nav />
+      </header>
+      <main>
+        <h1>this is BudgetTracking page</h1>
+      </main>
     </>
   );
 };

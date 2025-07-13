@@ -1,7 +1,13 @@
+import Nav from "../../Components/Navigation/NavBar";
 const Account = () => {
   return (
     <>
-      <h1>this is acc page</h1>
+      <header>
+        <Nav />
+      </header>
+      <main>
+        <h1>this is acc page</h1>
+      </main>
     </>
   );
 };

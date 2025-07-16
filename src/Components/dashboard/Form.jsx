@@ -1,18 +1,21 @@
 import { useState } from "react";
 
-const Form = ({ cancelModal }) => {
+const Form = ({ cancelModal, NewInventory, onClose, onSum }) => {
   const [name, setName] = useState("");
-  const [price, setPrice] = useState("");
-  const [quantity, setQuantity] = useState("");
+  const [price, setPrice] = useState(0);
+  const [quantity, setQuantity] = useState(0);
+
   const sumbitHandler = (e) => {
     e.preventDefault();
 
     const data = {
       name: name,
-      price: price,
+      price: Number(price),
       quantity: quantity,
     };
-    console.log(data);
+    NewInventory(data);
+    onClose();
+    onSum(Number(price));
   };
 
   const nameHandler = (e) => {
@@ -39,22 +42,24 @@ const Form = ({ cancelModal }) => {
             Product Name
           </label>
           <input
-            className=" rounded-md outline-0 border text-sm p-1 text-gray-500 border-gray-400"
+            className=" w-full rounded-md outline-0 border text-sm p-1 text-gray-500 border-gray-400"
             type="text"
             onChange={nameHandler}
             name="name"
+            required
             id="name"
           />
         </div>
-        <div>
+        <div className=" flex flex-col">
           <label htmlFor="price" className=" text-gray-500 text-sm">
             Price
           </label>
           <input
-            className=" rounded-md outline-0 border text-sm p-1 text-gray-500 border-gray-400"
+            className=" w-full rounded-md outline-0 border text-sm p-1 text-gray-500 border-gray-400"
             type="number"
             onChange={priceHandler}
             name="price"
+            required
             id="price"
           />
         </div>
@@ -63,8 +68,9 @@ const Form = ({ cancelModal }) => {
             Quantity
           </label>
           <input
-            className=" rounded-md outline-0 border text-sm p-1 text-gray-500 border-gray-400"
+            className=" w-full rounded-md outline-0 border text-sm p-1 text-gray-500 border-gray-400"
             type="number"
+            required
             onChange={quantityHandler}
             name="quantity"
             id="quantity"

@@ -1,7 +1,6 @@
 import Nav from "../../Components/Navigation/NavBar";
-import StatCard from "../../Components/dashboard/StatCard";
 
-const dashboard = () => {
+const Dashboard = () => {
   return (
     <>
       <header>
@@ -14,4 +13,4 @@ const dashboard = () => {
   );
 };
 
-export default dashboard;
+export default Dashboard;

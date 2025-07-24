@@ -7,25 +7,8 @@ import Stocks from "../pages/stocks/Stocks.jsx";
 import Cookwithme from "../pages/cook-with-me/CookWithMe.jsx";
 import Account from "../pages/account/Acount.jsx";
 import BudgetTracking from "../pages/budget-tracking/BudgetTracking.jsx";
-import { useNavigate } from "react-router-dom";
-import supabase from "../../utils/supabase.js";
-import { useEffect } from "react";
+
 const AppRoutes = () => {
-  const navigate = useNavigate();
-  useEffect(() => {
-    const isValidUser = async () => {
-      const { data, error } = await supabase.auth.getSession();
-
-      if (data.session) {
-        console.log("user is login");
-      } else {
-        console.log(error);
-        navigate("/login");
-      }
-    };
-
-    isValidUser();
-  }, [navigate]);
   return (
     <>
       <Routes>

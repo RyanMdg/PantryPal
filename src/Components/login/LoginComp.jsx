@@ -6,7 +6,7 @@ import { FaRegEye, FaRegEyeSlash, FaFacebook } from "react-icons/fa";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import LoginAuth from "../../auth/login";
-import Modal from "../dashboard/Modal";
+import Loaders from "../GlobalComponents/loaders";
 
 const LoginComp = () => {
   const navigate = useNavigate();
@@ -151,7 +151,7 @@ const LoginComp = () => {
       )}
       {isFetching && (
         <div className=" flex justify-center items-center h-screen">
-          <h1>Loading</h1>
+          <Loaders />
         </div>
       )}
     </>

@@ -1,10 +1,10 @@
 import { useState } from "react";
 import Nav from "../../Components/Navigation/NavBar";
-import StatCard from "../../Components/dashboard/StatCard";
-import ButtonAdd from "../../Components/dashboard/ButtonShowModal";
-import Modal from "../../Components/dashboard/Modal";
-import Form from "../../Components/dashboard/Form";
-import NewInventory from "../../Components/dashboard/NewInventory";
+import StatCard from "../../Components/stocks/StatCard";
+import ButtonAdd from "../../Components/stocks/ButtonShowModal";
+import Modal from "../../Components/stocks/Modal";
+import Form from "../../Components/stocks/Form";
+import NewInventory from "../../Components/stocks/NewInventory";
 
 const Stocks = () => {
   const [isVisible, setIsVisible] = useState(false);
